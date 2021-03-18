@@ -47,6 +47,7 @@ public class Squirrel {
      * Constructor that creates a 3 tile Squirrel with the given parameters.
      * @param head the picture of the head of the Squirrel.
      * @param tail the picture of the tail of the Squirrel.
+     * @param flower the picture of the flower of the Squirrel.
      * @param headX the x coordinates of the head of the Squirrel.
      * @param headY the y coordinates of the head of the Squirrel.
      * @param tailX the x coordinates of the tail of the Squirrel.
@@ -299,7 +300,7 @@ public class Squirrel {
 
     /**
      * Set a type for the head of a specific Squirrel.
-     * @param type a way to differentiate the head of a Squirrel from one another.
+     * @param headType a way to differentiate the head of a Squirrel from one another.
      */
     public void setHeadType(String headType) {
         this.headType = headType;

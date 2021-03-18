@@ -381,8 +381,9 @@ public class Board implements ActionListener{
      * Check if the movement of the squirrel the player chooses is valid.
      * @param clickedSquirrel the choosen squirrel.
      * @param e the direction up/down/left/right.
-     * @param rotation the rotation of the pictures in degrees of the respective squirrel.
      * @return true if valid/false if not.
+     * 
+     * @param rotation the rotation of the pictures in degrees of the respective squirrel.
      */
     public boolean validMove(Squirrel clickedSquirrel, ActionEvent e){
 

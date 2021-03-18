@@ -27,20 +27,22 @@ public class Board implements ActionListener{
 
     private Squirrel clickedSquirrel = new Squirrel();
 
-    private Picture arrowUpP =  new Picture("BigArrow.png", 0);
+    private String filePath = "./icons/";
+
+    private Picture arrowUpP =  new Picture(filePath + "BigArrow.png", 0);
     private JButton arrowUp = new JButton(arrowUpP);
 
-    private Picture arrowDownP =  new Picture("BigArrow.png", 180);
+    private Picture arrowDownP =  new Picture(filePath + "BigArrow.png", 180);
     private JButton arrowDown = new JButton(arrowDownP);
 
-    private Picture arrowLeftP =  new Picture("Arrow.png", 270);
+    private Picture arrowLeftP =  new Picture(filePath + "Arrow.png", 270);
     private JButton arrowLeft = new JButton(arrowLeftP);
 
-    private Picture arrowRightP =  new Picture("Arrow.png", 90);
+    private Picture arrowRightP =  new Picture(filePath + "Arrow.png", 90);
     private JButton arrowRight = new JButton(arrowRightP);
 
-    private Picture emptySquare = new Picture("Empty.png", 0);
-    private Picture holeNut = new Picture("HoleNut.png", 0);
+    private Picture emptySquare = new Picture(filePath + "Empty.png", 0);
+    private Picture holeNut = new Picture(filePath + "HoleNut.png", 0);
 
     private int counter = 0;        //for number of moves
     private int nutHeads = 4;       //if equal to 0, the level is won
@@ -153,7 +155,7 @@ public class Board implements ActionListener{
         arrayHoles = null;              //reset the array of the Holes whene selecting a new level
         arrayHoles = new Hole[4];
 
-        Picture holeSquare = new Picture("Hole.png", 0);
+        Picture holeSquare = new Picture(filePath + "Hole.png", 0);
         arrayHoles[0] = new Hole(holeSquare, 0, 2, "hole");
         arrayHoles[1] = new Hole(holeSquare, 1, 0, "hole");
         arrayHoles[2] = new Hole(holeSquare, 2, 1, "hole");
@@ -178,62 +180,61 @@ public class Board implements ActionListener{
 
         addHolesToBoard();
 
+        Picture flowerP =  new Picture(filePath + "Flower.png", 0);
+        Picture squirrelFlower = new Picture(filePath + "SquirrelFlower.png", 0);
+
         if (selectedLevel == "Level 1"){
             nutHeads = 2;                          //set the number of nutHeads the level has
 
             //create the squirrels and set their location
             arraySquirrels = new Squirrel[2]; 
-            Picture redSquirrelHeadNut = new Picture("RedSquirrel1Nut.png", 270);
-            Picture redSquirrelTail = new Picture("RedSquirrel2.png", 270);
+            Picture redSquirrelHeadNut = new Picture(filePath + "RedSquirrel1Nut.png", 270);
+            Picture redSquirrelTail = new Picture(filePath + "RedSquirrel2.png", 270);
             arraySquirrels[0] = new Squirrel(redSquirrelHeadNut, redSquirrelTail, 1, 1, 1, 2, "red", "headNut");
 
-            Picture greySquirrelHeadNut = new Picture("GreySquirrel1Nut.png", 0);
-            Picture greySquirrelTail = new Picture("GreySquirrel2.png", 0);
+            Picture greySquirrelHeadNut = new Picture(filePath + "GreySquirrel1Nut.png", 0);
+            Picture greySquirrelTail = new Picture(filePath + "GreySquirrel2.png", 0);
             arraySquirrels[1] = new Squirrel(greySquirrelHeadNut, greySquirrelTail, 2, 2, 3, 2, "grey", "headNut");
 
             //create the flower/flowers and set it'/their location
             arrayFlowers = new Flower[1];
-            Picture flowerP =  new Picture("Flower.png", 0);
             arrayFlowers[0] = new Flower(flowerP, 2, 1, "single");
         }
         else if (selectedLevel == "Level 2"){
             nutHeads = 2;
     
             arraySquirrels = new Squirrel[2];
-            Picture squirrelFlower = new Picture("SquirrelFlower.png", 0);
     
-            Picture brownSquirrelHeadNut = new Picture("BrownSquirrel1Nut.png", 0);
-            Picture brownSquirrelTail = new Picture("BrownSquirrel2.png", 0);
+            Picture brownSquirrelHeadNut = new Picture(filePath + "BrownSquirrel1Nut.png", 0);
+            Picture brownSquirrelTail = new Picture(filePath + "BrownSquirrel2.png", 0);
             arraySquirrels[0] = new Squirrel(brownSquirrelHeadNut, brownSquirrelTail, squirrelFlower, 2, 0, 3, 0, 2, 1, "brown", "headNut");
     
-            Picture blackSquirrelHeadNut = new Picture("BlackSquirrel1Nut.png", 180);
-            Picture blackSquirrelTail = new Picture("BlackSquirrel2.png", 180);
+            Picture blackSquirrelHeadNut = new Picture(filePath + "BlackSquirrel1Nut.png", 180);
+            Picture blackSquirrelTail = new Picture(filePath + "BlackSquirrel2.png", 180);
             arraySquirrels[1] = new Squirrel(blackSquirrelHeadNut, blackSquirrelTail, squirrelFlower, 2, 3, 1, 3, 1, 2, "black", "headNut");
     
             arrayFlowers = new Flower[1];
-            Picture flowerP =  new Picture("Flower.png", 0);
             arrayFlowers[0] = new Flower(flowerP, 3, 3, "single");
         }
         else if (selectedLevel == "Level 3"){
             nutHeads = 4;
 
             arraySquirrels = new Squirrel[4];
-            Picture squirrelFlower = new Picture("SquirrelFlower.png", 0);
 
-            Picture redSquirrelHeadNut = new Picture("RedSquirrel1Nut.png", 270);
-            Picture redSquirrelTail = new Picture("RedSquirrel2.png", 270);
+            Picture redSquirrelHeadNut = new Picture(filePath + "RedSquirrel1Nut.png", 270);
+            Picture redSquirrelTail = new Picture(filePath + "RedSquirrel2.png", 270);
             arraySquirrels[0] = new Squirrel(redSquirrelHeadNut, redSquirrelTail, 2, 0, 2, 1, "red", "headNut");
 
-            Picture greySquirrelHeadNut = new Picture("GreySquirrel1Nut.png", 180);
-            Picture greySquirrelTail = new Picture("GreySquirrel2.png", 180);
+            Picture greySquirrelHeadNut = new Picture(filePath + "GreySquirrel1Nut.png", 180);
+            Picture greySquirrelTail = new Picture(filePath + "GreySquirrel2.png", 180);
             arraySquirrels[1] = new Squirrel(greySquirrelHeadNut, greySquirrelTail, 2, 3, 1, 3, "grey", "headNut");
 
-            Picture brownSquirrelHeadNut = new Picture("BrownSquirrel1Nut.png", 180);
-            Picture brownSquirrelTail = new Picture("BrownSquirrel2.png", 180);
+            Picture brownSquirrelHeadNut = new Picture(filePath + "BrownSquirrel1Nut.png", 180);
+            Picture brownSquirrelTail = new Picture(filePath + "BrownSquirrel2.png", 180);
             arraySquirrels[2] = new Squirrel(brownSquirrelHeadNut, brownSquirrelTail, squirrelFlower, 3, 2, 2, 2, 3, 1, "brown", "headNut");
 
-            Picture blackSquirrelHeadNut = new Picture("BlackSquirrel1Nut.png", 180);
-            Picture blackSquirrelTail = new Picture("BlackSquirrel2.png", 180);
+            Picture blackSquirrelHeadNut = new Picture(filePath + "BlackSquirrel1Nut.png", 180);
+            Picture blackSquirrelTail = new Picture(filePath + "BlackSquirrel2.png", 180);
             arraySquirrels[3] = new Squirrel(blackSquirrelHeadNut, blackSquirrelTail, squirrelFlower, 1, 2, 0, 2, 0, 1, "black", "headNut");
 
         }
@@ -241,40 +242,37 @@ public class Board implements ActionListener{
             nutHeads = 3;
 
             arraySquirrels = new Squirrel[3];
-            Picture squirrelFlower = new Picture("SquirrelFlower.png", 0);
 
-            Picture redSquirrelHeadNut = new Picture("RedSquirrel1Nut.png", 270);
-            Picture redSquirrelTail = new Picture("RedSquirrel2.png", 270);
+            Picture redSquirrelHeadNut = new Picture(filePath + "RedSquirrel1Nut.png", 270);
+            Picture redSquirrelTail = new Picture(filePath + "RedSquirrel2.png", 270);
             arraySquirrels[0] = new Squirrel(redSquirrelHeadNut, redSquirrelTail, 2, 0, 2, 1, "red", "headNut");
 
-            Picture brownSquirrelHeadNut = new Picture("BrownSquirrel1Nut.png", 0);
-            Picture brownSquirrelTail = new Picture("BrownSquirrel2.png", 0);
+            Picture brownSquirrelHeadNut = new Picture(filePath + "BrownSquirrel1Nut.png", 0);
+            Picture brownSquirrelTail = new Picture(filePath + "BrownSquirrel2.png", 0);
             arraySquirrels[1] = new Squirrel(brownSquirrelHeadNut, brownSquirrelTail, squirrelFlower, 0, 0, 1, 0, 0, 1, "brown", "headNut");
 
-            Picture blackSquirrelHeadNut = new Picture("BlackSquirrel1Nut.png", 270);
-            Picture blackSquirrelTail = new Picture("BlackSquirrel2.png", 270);
+            Picture blackSquirrelHeadNut = new Picture(filePath + "BlackSquirrel1Nut.png", 270);
+            Picture blackSquirrelTail = new Picture(filePath + "BlackSquirrel2.png", 270);
             arraySquirrels[2] = new Squirrel(blackSquirrelHeadNut, blackSquirrelTail, squirrelFlower, 3, 1, 3, 2, 2, 2, "black", "headNut");
 
             arrayFlowers = new Flower[1];
-            Picture flowerP =  new Picture("Flower.png", 0);
             arrayFlowers[0] = new Flower(flowerP, 3, 3, "single");
         }
         else if (selectedLevel == "Level 5"){
             nutHeads = 3;
 
             arraySquirrels = new Squirrel[3];
-            Picture squirrelFlower = new Picture("SquirrelFlower.png", 0);
 
-            Picture redSquirrelHeadNut = new Picture("RedSquirrel1Nut.png", 90);
-            Picture redSquirrelTail = new Picture("RedSquirrel2.png", 90);
+            Picture redSquirrelHeadNut = new Picture(filePath + "RedSquirrel1Nut.png", 90);
+            Picture redSquirrelTail = new Picture(filePath + "RedSquirrel2.png", 90);
             arraySquirrels[0] = new Squirrel(redSquirrelHeadNut, redSquirrelTail, 0, 3, 0, 2, "red", "headNut");
 
-            Picture brownSquirrelHeadNut = new Picture("BrownSquirrel1Nut.png", 90);
-            Picture brownSquirrelTail = new Picture("BrownSquirrel2.png", 90);
+            Picture brownSquirrelHeadNut = new Picture(filePath + "BrownSquirrel1Nut.png", 90);
+            Picture brownSquirrelTail = new Picture(filePath + "BrownSquirrel2.png", 90);
             arraySquirrels[1] = new Squirrel(brownSquirrelHeadNut, brownSquirrelTail, squirrelFlower, 1, 3, 1, 2, 2, 3, "brown", "headNut");
 
-            Picture blackSquirrelHeadNut = new Picture("BlackSquirrel1Nut.png", 90);
-            Picture blackSquirrelTail = new Picture("BlackSquirrel2.png", 90);
+            Picture blackSquirrelHeadNut = new Picture(filePath + "BlackSquirrel1Nut.png", 90);
+            Picture blackSquirrelTail = new Picture(filePath + "BlackSquirrel2.png", 90);
             arraySquirrels[2] = new Squirrel(blackSquirrelHeadNut, blackSquirrelTail, squirrelFlower, 2, 2, 2, 1, 3, 1, "black", "headNut");
 
         }
@@ -282,22 +280,20 @@ public class Board implements ActionListener{
             nutHeads = 3;
 
             arraySquirrels = new Squirrel[3];
-            Picture squirrelFlower = new Picture("SquirrelFlower.png", 0);
 
-            Picture greySquirrelHeadNut = new Picture("GreySquirrel1Nut.png", 180);
-            Picture greySquirrelTail = new Picture("GreySquirrel2.png", 180);
+            Picture greySquirrelHeadNut = new Picture(filePath + "GreySquirrel1Nut.png", 180);
+            Picture greySquirrelTail = new Picture(filePath + "GreySquirrel2.png", 180);
             arraySquirrels[0] = new Squirrel(greySquirrelHeadNut, greySquirrelTail, 1, 3, 0, 3, "grey", "headNut");
 
-            Picture brownSquirrelHeadNut = new Picture("BrownSquirrel1Nut.png", 90);
-            Picture brownSquirrelTail = new Picture("BrownSquirrel2.png", 90);
+            Picture brownSquirrelHeadNut = new Picture(filePath + "BrownSquirrel1Nut.png", 90);
+            Picture brownSquirrelTail = new Picture(filePath + "BrownSquirrel2.png", 90);
             arraySquirrels[1] = new Squirrel(brownSquirrelHeadNut, brownSquirrelTail, squirrelFlower, 1, 2, 1, 1, 2, 2, "brown", "headNut");
 
-            Picture blackSquirrelHeadNut = new Picture("BlackSquirrel1Nut.png", 180);
-            Picture blackSquirrelTail = new Picture("BlackSquirrel2.png", 180);
+            Picture blackSquirrelHeadNut = new Picture(filePath + "BlackSquirrel1Nut.png", 180);
+            Picture blackSquirrelTail = new Picture(filePath + "BlackSquirrel2.png", 180);
             arraySquirrels[2] = new Squirrel(blackSquirrelHeadNut, blackSquirrelTail, squirrelFlower, 3, 1, 2, 1, 2, 0, "black", "headNut");
 
             arrayFlowers = new Flower[1];
-            Picture flowerP =  new Picture("Flower.png", 0);
             arrayFlowers[0] = new Flower(flowerP, 3, 3, "single");
         }
         addObstacles();     //add the squirrels/flowers/holes to the board
@@ -352,16 +348,16 @@ public class Board implements ActionListener{
      */
     public void changeSquirrelHead(){
         if(clickedSquirrel.getType() == "red")
-            clickedSquirrel.setHead(new Picture("RedSquirrel1.png", clickedSquirrel.getHead().getRotation()));
+            clickedSquirrel.setHead(new Picture(filePath + "RedSquirrel1.png", clickedSquirrel.getHead().getRotation()));
 
         if(clickedSquirrel.getType() == "grey")
-            clickedSquirrel.setHead(new Picture("GreySquirrel1.png", clickedSquirrel.getHead().getRotation()));
+            clickedSquirrel.setHead(new Picture(filePath + "GreySquirrel1.png", clickedSquirrel.getHead().getRotation()));
 
         if(clickedSquirrel.getType() == "black")
-            clickedSquirrel.setHead(new Picture("BlackSquirrel1.png", clickedSquirrel.getHead().getRotation()));
+            clickedSquirrel.setHead(new Picture(filePath + "BlackSquirrel1.png", clickedSquirrel.getHead().getRotation()));
 
         if(clickedSquirrel.getType() == "brown")
-            clickedSquirrel.setHead(new Picture("BrownSquirrel1.png", clickedSquirrel.getHead().getRotation()));
+            clickedSquirrel.setHead(new Picture(filePath + "BrownSquirrel1.png", clickedSquirrel.getHead().getRotation()));
 
         clickedSquirrel.setHeadType("head");
         nutHeads--;

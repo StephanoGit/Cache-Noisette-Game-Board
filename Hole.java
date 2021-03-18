@@ -20,7 +20,7 @@ public class Hole {
      * @param holeP The picture of the hole
      * @param x The x coordinates from the left corner of the board.
      * @param y The y coordinates from the left corner of the board.
-     * @param type a way to differentiate a hole from a nutHole
+     * @param type a way to differentiate a hole from a nutHole.
      */
     public Hole(Picture holeP, int x, int y, String type) {
         this.holeP = holeP;

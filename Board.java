@@ -335,7 +335,7 @@ public class Board implements ActionListener{
 
     /**
      * Set the icons of the board buttons to empty squares
-     * and make them available for movement
+     * and make them available for movement.
      */
     public void ResetBoard(){
         for(int i = 0; i < 4; i++) {
@@ -348,6 +348,7 @@ public class Board implements ActionListener{
 
     /**
      * Change the head of a squirrel from a nutHead to a simple head
+     * and decrement the the nutHead counter.
      */
     public void changeSquirrelHead(){
         if(clickedSquirrel.getType() == "red")
@@ -368,7 +369,7 @@ public class Board implements ActionListener{
 
     /**
      * Check when a nutHead is above a hole and change the picture
-     * of the hole to a holeNut
+     * of the hole to a holeNut.
      */
     public void checkHole(){
         for(int i = 0; i < arrayHoles.length; i++){
@@ -386,7 +387,7 @@ public class Board implements ActionListener{
      * Check if the movement of the squirrel the player chooses is valid.
      * @param clickedSquirrel the choosen squirrel.
      * @param e the direction up/down/left/right.
-     * @param rotation the rotation in degrees of the respective squirrel.
+     * @param rotation the rotation of the pictures in degrees of the respective squirrel.
      * @return true if valid/false if not.
      */
     public boolean validMove(Squirrel clickedSquirrel, ActionEvent e){
@@ -736,7 +737,7 @@ public class Board implements ActionListener{
     /**
      * After every move, the previous squares that were a squirrel
      * have to be set available, so that another squirrel can move
-     * to those coordonates
+     * to those coordinates.
      */
     public void setPreviousSquaresAvailable(){
         matrixSquare[clickedSquirrel.getHeadX()][clickedSquirrel.getHeadY()].setAvailable(true);
@@ -744,7 +745,7 @@ public class Board implements ActionListener{
     }
 
     /**
-     * Check when a level is won and display an appropriate message
+     * Check when a level is won and display an appropriate message.
      */
     public void checkWin(){
         if(nutHeads == 0){
@@ -753,8 +754,8 @@ public class Board implements ActionListener{
     }
 
     /**
-     * Change the 3 tile squirrel coordonates in relation with the choosen direction
-     * @param direction a string that represents the direction (up/down/left/right)
+     * Change the 3 tile squirrel coordinates in relation with the choosen direction
+     * @param direction a string that represents the direction (up/down/left/right).
      */
     public void moveThreeTileSquirrel(String direction){
         setPreviousSquaresAvailable();
@@ -764,11 +765,11 @@ public class Board implements ActionListener{
     }
 
     /**
-     * Complete the movement of a squirrel
-     * 1. Change the prev squares where the squirrel was with the respective board tile
-     * 2. Check for headNuts over normal holes
-     * 3. Add the obstacoles to the board
-     * 4. Increment move counter and set new value on button
+     * Complete the movement of a squirrel.
+     * 1. Change the prev squares where the squirrel was with the respective board tile.
+     * 2. Check for headNuts over normal holes.
+     * 3. Add the obstacoles to the board.
+     * 4. Increment move counter and set new value on button.
      */
     public void doFullMovementCycle(){
         ResetBoard();
@@ -779,7 +780,7 @@ public class Board implements ActionListener{
     }
 
     /**
-     * Check what button is pressed and perform different actions
+     * Check what button is pressed and perform different actions.
      */
     public void actionPerformed(ActionEvent e){
         JButton button = (JButton)e.getSource();

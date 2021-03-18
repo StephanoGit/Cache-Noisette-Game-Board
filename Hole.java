@@ -1,5 +1,6 @@
 /**
  * This class reprsents a Hole on the board game "Cache Noisette!".
+ * @author Stefan Popovici
  */
 public class Hole {
 

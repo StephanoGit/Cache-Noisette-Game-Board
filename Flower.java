@@ -1,5 +1,6 @@
 /**
  * This class represents a flower square/piece on the board game "Cache Noisette!".
+ * @author Stefan Popovici
  */
 public class Flower {
 

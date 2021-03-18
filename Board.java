@@ -1,8 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
-import java.util.Timer;
 
 /**
  * This class creates the board of the game c and implements it's mechanics.

@@ -1,6 +1,10 @@
+/**
+ * Create the board game "Cache Noisette!".
+ * @author Stefan Popovici
+ */
 public class Main {
     public static void main(String[] args) {
-	    Board boardPlay = new Board();
+	    Board boardGame = new Board();
         
     }
 }

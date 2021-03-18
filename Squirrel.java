@@ -1,5 +1,6 @@
 /**
  * This class reprsents a Squirrel piece on the board game "Cache Noisette!".
+ * @author Stefan Popovici
  */
 public class Squirrel {
     Picture head;

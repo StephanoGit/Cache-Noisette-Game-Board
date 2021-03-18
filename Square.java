@@ -2,6 +2,7 @@ import javax.swing.JButton;
 
 /**
  * This class represents a Square on the 4x4 board game "Cache Noisette!".
+ * @author Stefan Popovici
  */
 public class Square {
 

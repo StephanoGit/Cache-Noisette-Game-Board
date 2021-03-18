@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Board"},{"p":"<Unnamed>","l":"Flower"},{"p":"<Unnamed>","l":"Hole"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Picture"},{"p":"<Unnamed>","l":"Square"},{"p":"<Unnamed>","l":"Squirrel"}];updateSearchResults();

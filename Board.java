@@ -743,7 +743,8 @@ public class Board implements ActionListener{
      */
     public void checkWin(){
         if(nutHeads == 0){
-            frame.setTitle("YOU WIN!");
+            frame.setTitle("YOU WIN! - select new level");
+            System.out.println("YOU WIN! - select new level");
         }
     }
 

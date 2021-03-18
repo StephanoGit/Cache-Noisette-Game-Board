@@ -3,19 +3,19 @@
  * @author Stefan Popovici
  */
 public class Squirrel {
-    Picture head;
-    Picture tail;
-    Picture flower;
+    private Picture head;
+    private Picture tail;
+    private Picture flower;
 
-    int headX;
-    int headY;
-    int tailX;
-    int tailY;
-    int flowerX;
-    int flowerY;
+    private int headX;
+    private int headY;
+    private int tailX;
+    private int tailY;
+    private int flowerX;
+    private int flowerY;
 
-    String type;
-    String headType;
+    private String type;
+    private String headType;
 
     public Squirrel() {
         this(null, null, null, -1, -1, -1, -1, -1, -1, "", "");
